@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.card{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(8,1fr);
+    
+}
+
+.card_content{
+    padding: 15px;
+    background-color: dodgerblue;
+    color: white;
+    grid-column: 3/-1;
+    grid-row: 2/-2;
+}
+
+.card_content h2{
+    font-size: 3.5rem;
+}
+
+p{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.card_content a{
+    font-size: 1.6rem;
+    border: 2px solid white;
+    padding: 1rem 2rem;
+    display: block;
+    width: max-content;
+    color: white;
+    margin-top: 1rem;
+}
+
+.card::after{
+    content: "";
+    display: block;
+    background-color: red;
+    grid-column: 1/5;
+    grid-row: 1/-1;
+    background-image: linear-gradient(#ff00006e,#0000ff5b), url("teclado.jpg");
+    background-size: cover;
+    z-index: -1;
+}
+
+@media screen and (max-width:700px){
+    html{
+        font-size: 8px;
+    }
+    .card{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,1fr);
+    }
+    
+    .card_content{
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        text-align: center;
+    }
+
+    .card_content a{
+        margin: 10px auto;
+        margin-bottom: -10px;
+    }
+
+    .card::after{
+        grid-column: 1/-1;
+        grid-row: 2/-1;
+        background-position: bottom;
+    }
+}
+

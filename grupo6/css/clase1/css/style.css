@@ -1,0 +1,29 @@
+body{
+    background-color: bisque;
+}
+
+h1{
+    background-color: aquamarine;
+}
+
+p{
+    background-color: blue;
+    color: coral;
+}
+
+#verde{
+    background-color: darkgreen;
+}
+
+#rosa{
+    background-color: darkorchid;
+}
+
+.amarillo{
+    background-color: yellow;
+}
+
+#azul{
+    background-color: blue;
+}
+

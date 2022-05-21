@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+}
+
+.btn{
+    padding: .5rem 1.25rem;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: yellow;
+    color: red;
+}
+
+.card{
+    background-color: gray;
+    height: 610px;
+    width: 419px;
+    padding-top: 5.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.card .img{
+    margin:2rem auto 0;
+    border: 8px solid rgb(175, 174, 174);
+    width: 76%;
+    height: 312px;
+    background-image: url(../img/cards/IMG-20211005-WA0001.jpg);
+    background-position: 50% 38%;
+}

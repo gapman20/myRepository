@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.ir{
+    text-decoration: none;
+    background-color: dodgerblue;
+    width: max-content;
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 0 10px 2px #1569bd;
+}
+.ir:active{
+    transform: scale(.9);
+    transition: .1s;
+}
+
+.container{
+    background-color: #eee;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: grid;
+    place-content: center;
+    z-index: -1;
+    opacity: 0;
+    overflow: hidden;
+    top: 0;
+    transition: .5s;
+}
+
+.container_content{
+    background-color: white;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    transition: 1;
+    overflow: hidden;
+}
+
+.container_texts{
+    transform: translateY(-200%);
+    transition: 1s;
+    transition-delay: 1s;
+}
+
+.container:target{
+    opacity: 1;
+    z-index: 2;
+}
+
+img{
+    width: 100%;
+}
+
+.close{
+    text-decoration: none;
+    background-color: #4d1be2;
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.container:target .container_content{
+    animation: cards 1.5s;
+}
+
+@keyframes cards{
+    0%{
+        transform: translateY(-200%);
+        filter: blur(20px);
+    }
+    50%{
+        transform: rotate(20deg);
+    }
+    80%{
+        transform: rotate(-20deg);
+    }
+    90%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.inicio:target .container_content{
+    transform: translateX(-200%) rotate(360deg);
+    opacity: .5;
+}
+
+.inicio:target .container_texts{
+    transform: translateY(-200%);
+}
+
+.container:target .container_texts{
+    transform: translateY(0);
+    transform: 1s;
+}
+
